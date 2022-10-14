@@ -1,6 +1,6 @@
 {
     "BaseData": {
-        "name": "aa",
+        "name": "Player",
         "HP": 100,
         "RAM": 100,
         "CLOCK": 1,
