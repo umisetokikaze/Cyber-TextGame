@@ -3,8 +3,8 @@ from collections import OrderedDict
 import pprint
 
 class MGDataJson:
-    def __init__(self):
-        self
+    def __init__(self) -> None:
+        pass
 
     def JsonWriter(jsonName, data):
         with open("data/"+jsonName+".json", "w") as f:
