@@ -15,11 +15,19 @@ class MGDataJson:
             data = json.load(f)
         return data
 
-    def PlayerDataRW(Mode,data):
-        if Mode == "r":
-            with open("data/PlayerData.json", "r") as f:
-                data = json.load(f)
-            return data
+    def PlayerDataRW(self,Mode,data):
         if Mode == "w":
-            with open("data/PlayerData.json", "w") as f:
-                json.dump(data, f, indent=4 ,ensure_ascii=False)
+            self.JsonWriter("PlayerData","")
+        if Mode == "r":
+            output = self.JsonReader("PlayerData",data)
+            return output
+
+    def ItemDataRW(self,Mode,data):
+        if Mode == "w":
+            self.JsonWriter("ItemData","")
+        if Mode == "r":
+            output = self.JsonReader("ItemData",data)
+            return output
+
+
+

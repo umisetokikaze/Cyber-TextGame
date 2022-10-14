@@ -4,9 +4,7 @@ class BaseItem():
         pass
 
     def getItemData():
-        D = MDJ.JsonReader("ItemsData")
+        D = MDJ.ItemDataRW("r","")
         return D
-    def setItemData(self,name, Dat):
-        D = self.getItemData()
-        D["ItemsData"][name] = Dat
-        MDJ.JsonWriter(D)
+    def setItemData(Data):
+        MDJ.ItemDataRW("w",Data)
